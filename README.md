@@ -36,6 +36,10 @@ yarn dev
 
 <br>
 
+# Persistindo as migrations no banco de dados
+- yarn typeorm migration:run -d src/data-source.ts
+
+
 # 📋 Documentação
 
 ## Cadastro de usuários

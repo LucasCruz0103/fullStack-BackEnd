@@ -4,11 +4,11 @@ import * as dotenv from "dotenv";
 import { DataSource } from "typeorm";
 import User from "./entities/user.entity";
 import Contact from "./entities/contact.entity";
-import { createAll1680199181943 } from "./migrations/1680199181943-createAll";
+import { createAll1680297885345 } from "./migrations/1680297885345-createAll";
 
 dotenv.config();
 
-export const AppDataSource = new DataSource({
+const AppDataSource = new DataSource({
   type: "postgres",
   host: process.env.PGHOST,
   port: +process.env.PGPORT!,
@@ -18,7 +18,7 @@ export const AppDataSource = new DataSource({
   logging: true,
   synchronize: false,
   entities: [User, Contact ],
-  migrations: [createAll1680199181943],
+  migrations: [createAll1680297885345],
 });
 
 export default AppDataSource;
